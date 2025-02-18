@@ -124,7 +124,7 @@ const navOpen = ref(false)
                     target="_blank"
                     rel="noopener noreferrer"
                     class="font-moda rounded-md bg-black px-3 py-2 text-xl text-white hover:bg-gray-50 hover:text-black"
-                    >Protfolio</a
+                    >Portfolio</a
                 >
                 <a
                     href="https://www.instagram.com/styled.soirees/"
