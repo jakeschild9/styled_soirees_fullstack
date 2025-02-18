@@ -1,0 +1,25 @@
+.carosel-img {
+    display: flex;
+    height: 50vh;
+    width: 100vw;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: 50% 35%;
+}
+
+
+.center-fit {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+}
+
+.swiper-button-prev {
+    background-image: none;
+    --swiper-theme-color: black;
+}
+
+.swiper-button-next {
+    background-image: none;
+    --swiper-theme-color: black;
+}

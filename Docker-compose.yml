@@ -1,0 +1,19 @@
+
+services:
+  bakcend:
+    build:
+      context: ./Backend
+    container_name: backend
+    environment:
+      - PORT=443
+    ports:
+      - "443:443"
+      - "587"
+  frontend:
+    build:
+      context: ./Frontend
+    container_name: frontend
+    environment:
+      - VITE_LOGIN_SERVICE=http://localhost/api/auth
+    ports:
+      - "80:80"
