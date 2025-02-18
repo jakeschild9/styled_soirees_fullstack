@@ -1,6 +1,6 @@
 
 services:
-  bakcend:
+  backend:
     build:
       context: ./Backend
     container_name: backend

@@ -7,7 +7,7 @@ const navOpen = ref(false)
 
 <template>
     <div
-        class="min-h-24 items-center justify-between border-b border-gray-950 bg-gray-950 pl-5 sm:flex"
+        class="min-h-24 items-center justify-between border-b border-black bg-black pl-5 sm:flex"
     >
         <router-link class="flex flex-shrink-0 items-center pt-5 sm:p-0" to="/">
             <img class="h-14 w-auto sm:h-10" :src="logo" alt="SS" />
@@ -61,36 +61,36 @@ const navOpen = ref(false)
             >
                 <RouterLink
                     to="/"
-                    class="font-moda text-l rounded-md bg-neutral-950 px-4 py-2 text-white hover:bg-gray-50 hover:text-black"
+                    class="font-moda text-l rounded-md bg-black px-4 py-2 text-white hover:bg-gray-50 hover:text-black"
                     >Home</RouterLink
                 >
                 <RouterLink
                     to="/contact"
-                    class="font-moda text-l rounded-md bg-neutral-950 px-4 py-2 text-white hover:bg-gray-50 hover:text-black"
+                    class="font-moda text-l rounded-md bg-black px-4 py-2 text-white hover:bg-gray-50 hover:text-black"
                     >Contact</RouterLink
                 >
                 <RouterLink
                     to="/services"
-                    class="font-moda text-l rounded-md bg-neutral-950 px-4 py-2 text-white hover:bg-gray-50 hover:text-black"
+                    class="font-moda text-l rounded-md bg-black px-4 py-2 text-white hover:bg-gray-50 hover:text-black"
                     >Services</RouterLink
                 >
                 <RouterLink
                     to="/vendors"
-                    class="font-moda text-l rounded-md bg-neutral-950 px-4 py-2 text-white hover:bg-gray-50 hover:text-black"
+                    class="font-moda text-l rounded-md bg-black px-4 py-2 text-white hover:bg-gray-50 hover:text-black"
                     >Vendors</RouterLink
                 >
                 <a
                     href="https://styledsoirees.pixieset.com/styledsoireesportfolio/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="font-moda text-l rounded-md bg-neutral-950 px-4 py-2 text-white hover:bg-gray-50 hover:text-black"
+                    class="font-moda text-l rounded-md bg-black px-4 py-2 text-white hover:bg-gray-50 hover:text-black"
                     >Protfolio</a
                 >
                 <a
                     href="https://www.instagram.com/styled.soirees/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="font-moda text-l rounded-md bg-neutral-950 px-4 py-2 text-white hover:bg-gray-50 hover:text-black"
+                    class="font-moda text-l rounded-md bg-black px-4 py-2 text-white hover:bg-gray-50 hover:text-black"
                     >IG</a
                 >
             </nav>
@@ -101,36 +101,36 @@ const navOpen = ref(false)
             <div class="flex gap-x-1">
                 <RouterLink
                     to="/"
-                    class="font-moda rounded-md bg-neutral-950 px-3 py-2 text-xl text-white hover:bg-gray-50 hover:text-black"
+                    class="font-moda rounded-md bg-black px-3 py-2 text-xl text-white hover:bg-gray-50 hover:text-black"
                     >Home</RouterLink
                 >
                 <RouterLink
                     to="/contact"
-                    class="font-moda rounded-md bg-neutral-950 px-3 py-2 text-xl text-white hover:bg-gray-50 hover:text-black"
+                    class="font-moda rounded-md bg-black px-3 py-2 text-xl text-white hover:bg-gray-50 hover:text-black"
                     >Contact</RouterLink
                 >
                 <RouterLink
                     to="/services"
-                    class="font-moda rounded-md bg-neutral-950 px-3 py-2 text-xl text-white hover:bg-gray-50 hover:text-black"
+                    class="font-moda rounded-md bg-black px-3 py-2 text-xl text-white hover:bg-gray-50 hover:text-black"
                     >Services</RouterLink
                 >
                 <RouterLink
                     to="/vendors"
-                    class="font-moda rounded-md bg-neutral-950 px-3 py-2 text-xl text-white hover:bg-gray-50 hover:text-black"
+                    class="font-moda rounded-md bg-black px-3 py-2 text-xl text-white hover:bg-gray-50 hover:text-black"
                     >Vendors</RouterLink
                 >
                 <a
                     href="https://styledsoirees.pixieset.com/styledsoireesportfolio/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="font-moda rounded-md bg-neutral-950 px-3 py-2 text-xl text-white hover:bg-gray-50 hover:text-black"
+                    class="font-moda rounded-md bg-black px-3 py-2 text-xl text-white hover:bg-gray-50 hover:text-black"
                     >Protfolio</a
                 >
                 <a
                     href="https://www.instagram.com/styled.soirees/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="font-moda rounded-md bg-neutral-950 px-3 py-2 text-xl text-white hover:bg-gray-50 hover:text-black"
+                    class="font-moda rounded-md bg-black px-3 py-2 text-xl text-white hover:bg-gray-50 hover:text-black"
                     >IG</a
                 >
             </div>

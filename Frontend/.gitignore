@@ -1,0 +1,19 @@
+# Node dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Development files
+.local
+.DS_Store
+*.log
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Optional: IDE specific files
+.idea/
+.vscode/

@@ -26,12 +26,12 @@ import glow from "@/assets/img/glow.jpeg"
             <div
                 class="font-moda flex flex-wrap justify-center p-6 text-center"
             >
-                <router-link
+                <a
                     class="pb-5 text-3xl"
                     href="https://www.instagram.com/crimsonbridalcollective/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >CRIMSON BRIDAL COLLECTIVE</router-link
+                    >CRIMSON BRIDAL COLLECTIVE</a
                 >
                 <p class="text-slate-700">
                     Expert hair, Makeup, and Men’s styling to make your entire
@@ -51,12 +51,12 @@ import glow from "@/assets/img/glow.jpeg"
             <div
                 class="font-moda flex flex-wrap justify-center p-6 text-center"
             >
-                <router-link
+                <a
                     class="pb-5 text-center text-3xl"
                     href="https://www.instagram.com/Evermore.bride/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >EVERMORE BRIDAL</router-link
+                    >EVERMORE BRIDAL</a
                 >
                 <p class="text-slate-700">
                     Stunning dresses and elegant accessories to complete your
@@ -75,12 +75,12 @@ import glow from "@/assets/img/glow.jpeg"
             <div
                 class="font-moda flex flex-wrap justify-center p-6 text-center"
             >
-                <router-link
+                <a
                     class="pb-5 text-3xl"
                     href="https://www.instagram.com/malachiwestbrookphotography/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >MALACHI WESTBROOK</router-link
+                    >MALACHI WESTBROOK</a
                 >
                 <p class="text-slate-700">
                     Capturing timeless moments with a creative and artistic
@@ -100,12 +100,12 @@ import glow from "@/assets/img/glow.jpeg"
             <div
                 class="font-moda flex flex-wrap justify-center p-6 text-center"
             >
-                <router-link
+                <a
                     class="pb-5 text-3xl"
                     href="https://www.instagram.com/thebarsstl/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >THE BAR'S STL</router-link
+                    >THE BAR'S STL</a
                 >
                 <p class="text-slate-700">
                     The Bar’s adds a tasty twist to your event with their fun
@@ -122,12 +122,12 @@ import glow from "@/assets/img/glow.jpeg"
             <div
                 class="font-moda flex flex-wrap justify-center p-6 text-center"
             >
-                <router-link
+                <a
                     class="pb-5 text-3xl"
                     href="https://www.instagram.com/derek_coffman_photography/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >DEREK COFFMAN</router-link
+                    >DEREK COFFMAN</a
                 >
                 <p class="text-slate-700">
                     Personal and editorial-style photography that simply
@@ -143,12 +143,12 @@ import glow from "@/assets/img/glow.jpeg"
             <div
                 class="font-moda flex flex-wrap justify-center p-6 text-center"
             >
-                <router-link
+                <a
                     class="pb-5 text-3xl"
                     href="https://www.instagram.com/glowboothstl/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >GLOWBOOTH STL</router-link
+                    >GLOWBOOTH STL</a
                 >
                 <p class="text-slate-700">
                     Glowbooth STL brings the fun with a photo booth that's all
