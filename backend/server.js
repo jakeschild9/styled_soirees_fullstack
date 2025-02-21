@@ -9,10 +9,12 @@ const request = require("request");
 const app = express();
 
 var corsOptions = {
-  origin: "http://localhost",
+  origin: "https://styledsoirees.com",
 };
 
 app.use(cors(corsOptions));
+
+app.options('*', cors())
 
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
