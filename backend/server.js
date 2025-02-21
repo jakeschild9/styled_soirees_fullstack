@@ -9,7 +9,7 @@ const request = require("request");
 const app = express();
 
 var corsOptions = {
-  origin: "https://styledsoirees.com",
+  origin: "http://localhost",
 };
 
 app.use(cors(corsOptions));
