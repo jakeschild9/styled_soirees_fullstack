@@ -8,8 +8,8 @@ services:
       - PORT=443
     ports:
       - "443:443"
-      - "587"
-      - "465"
+      - "587:587"
+      - "465:465"
   frontend:
     build:
       context: ./Frontend
