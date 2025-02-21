@@ -9,7 +9,9 @@ const request = require("request");
 const app = express();
 
 var corsOptions = {
-  origin: "http://localhost",
+  origin: "https://styledsoirees.com",
+  headers: ["Content-Type"],
+  credentials: true,
 };
 
 app.use(cors(corsOptions));
