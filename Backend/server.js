@@ -8,14 +8,6 @@ const request = require("request");
 
 const app = express();
 
-var corsOptions = {
-  origin: "https://styledsoirees.com",
-  headers: ["Content-Type"],
-  credentials: true,
-};
-
-app.use(cors(corsOptions));
-
 app.options('*', cors())
 
 // parse requests of content-type - application/json
@@ -23,16 +15,6 @@ app.use(bodyParser.json());
 
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
-
-//connection to mongoose database
-//   mongoose.connect(process.env.MONGODB_URL)
-//     .then(() => {
-//       console.log("Connected to the database!");
-//     })
-//     .catch(err => {
-//       console.log("Cannot connect to the database!", err);
-//       process.exit();
-//     });
 
 app.post("/api/send-email", (req, res) => {
   const { subject, message, token } = req.body;

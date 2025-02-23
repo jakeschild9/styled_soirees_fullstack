@@ -3,6 +3,9 @@ node_modules/
 Frontend/node_modules/
 Backend/node_modules/
 
+/dist
+coverage/
+
 # Build output
 dist/
 
@@ -19,10 +22,6 @@ dist/
 # Optional: IDE specific files
 .idea/
 .vscode/
-
-.DS_Store
-node_modules
-/dist
 
 # local env files
 .env.local
