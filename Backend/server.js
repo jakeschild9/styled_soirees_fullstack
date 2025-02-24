@@ -48,5 +48,5 @@ app.post("/api/send-email", (req, res) => {
 
 // set port, listen for requests
 app.listen(process.env.SERVER_PORT, () => {
-  console.log(`Server is running on port ${PORT}.`);
+  console.log(`Server is running on port ${process.env.SERVER_PORT}.`);
 });
