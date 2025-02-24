@@ -22,12 +22,12 @@ const sendEmail = async (name, partnername, email, phone, message) => {
           token: token,
         };
         axios.post("/api/send-email", data).catch((error) => {
-          banner.value = !banner.value;
+          banner.value = true;
           notification.value = "fail";
         });
       })
       .then(function (response) {
-        banner.value = !banner.value;
+        banner.value = true;
         notification.value = "success";
         nameValue.value = "";
         partnernameValue.value = "";
@@ -36,7 +36,7 @@ const sendEmail = async (name, partnername, email, phone, message) => {
         messageValue.value = "";
       })
       .catch(function (error) {
-        banner.value = !banner.value;
+        banner.value = true;
         notification.value = "fail";
       });
   });

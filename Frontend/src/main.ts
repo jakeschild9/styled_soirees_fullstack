@@ -9,6 +9,6 @@ const app = createApp(App)
 
 app.use(router)
 
-axios.defaults.baseURL = "http://localhost:443/"
+axios.defaults.baseURL = import.meta.env.VITE_SERVER_IP
 
 app.mount("#app")
