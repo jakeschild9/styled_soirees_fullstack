@@ -47,7 +47,6 @@ app.post("/api/send-email", (req, res) => {
 });
 
 // set port, listen for requests
-const PORT = 3000;
-app.listen(PORT, () => {
+app.listen(process.env.SERVER_PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
