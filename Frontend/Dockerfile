@@ -11,10 +11,16 @@ COPY . .
 # Build the Vue.js application to the production mode to dist folder
 RUN npm run build
 # Use the lightweight node image from the previous stage for production deployment
-FROM nginx:alpine
-WORKDIR /usr/share/nginx/html
-RUN rm -rf ./*
-COPY --from=builder /app/dist .
-
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+FROM node:23-alpine AS production-stage
+# set the working directory
+WORKDIR /app
+# Install http-server
+RUN npm install -g http-server
+# Copy the build files generated in the prev step to the current working directory
+COPY --from=build-stage /app/dist /app
+# Expose the port 443
+EXPOSE 443
+# Serve it from http-server 
+CMD ["http-server", "/app", "-p", "443", "-c-1", "--proxy", "http://127.0.0.1:80?"]
+# --proxy - to handle routing correctly by serving index.html for all routes.
+# -c-1: Disables caching by setting the cache TTL to -1
