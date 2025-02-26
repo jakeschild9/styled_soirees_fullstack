@@ -9,8 +9,6 @@ RUN npm install
 # Copy the rest of the project files to the container
 COPY . .
 # Expose the ports
-EXPOSE 443
-EXPOSE 587
 EXPOSE 3000
 # run the start command to serve
 CMD [ "npm", "start" ]
