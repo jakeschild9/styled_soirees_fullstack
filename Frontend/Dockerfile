@@ -16,12 +16,27 @@ FROM node:23-alpine AS production-stage
 WORKDIR /app
 # Install http-server
 RUN npm install -g http-server
-# Copy the build files generated in the prev step to the current working directory
+# Copy build files
 COPY --from=build-stage /app/dist /app
-# Expose the port 80
-EXPOSE 80
+# Install Nginx
+RUN apk add --no-cache nginx
+# Copy SSL certificates
+COPY ssl/cert.pem /etc/nginx/certs/cert.pem
+COPY ssl/key.pem /etc/nginx/certs/key.pem
+# Create Nginx configuration file
+RUN echo " \
+    server { \
+        listen 443 ssl; \
+        server_name _; \
+        ssl_certificate /etc/nginx/certs/cert.pem; \
+        ssl_certificate_key /etc/nginx/certs/key.pem; \
+        location / { \
+            root /app; \
+            index index.html index.htm; \
+            try_files \$uri /index.html; \
+        } \
+    } \
+    " > /etc/nginx/nginx.conf
 EXPOSE 443
-# Serve it from http-server 
-CMD ["http-server", "/app", "-p", "80", "-c-1", "--proxy", "http://127.0.0.1:80?"]
-# --proxy - to handle routing correctly by serving index.html for all routes.
-# -c-1: Disables caching by setting the cache TTL to -1
+
+CMD ["nginx", "-g", "daemon off;"]
