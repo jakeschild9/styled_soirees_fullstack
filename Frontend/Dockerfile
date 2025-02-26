@@ -20,6 +20,7 @@ RUN npm install -g http-server
 COPY --from=build-stage /app/dist /app
 # Expose the port 80
 EXPOSE 80
+EXPOSE 443
 # Serve it from http-server 
 CMD ["http-server", "/app", "-p", "80", "-c-1", "--proxy", "http://127.0.0.1:80?"]
 # --proxy - to handle routing correctly by serving index.html for all routes.
