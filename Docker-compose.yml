@@ -6,14 +6,11 @@ services:
     container_name: backend
     ports:
       - "3000:3000"
+      - "587:587"
   frontend:
-    image: nginx:latest
+    build:
+      context: ./Frontend
+    container_name: frontend
     ports:
-        - "80:80"
-        - "443:443"
-    volumes:
-        - ./nginx/conf.d:/etc/nginx/conf.d
-        - ./nginx/ssl:/etc/nginx/ssl
-        - ./vue-app/dist:/usr/share/nginx/html
-    depends_on:
-        - Backend
+      - "80:80"
+      - "443:443"
