@@ -22,6 +22,6 @@ COPY --from=build-stage /app/dist /app
 EXPOSE 443
 EXPOSE 80
 # Serve it from http-server 
-CMD ["http-server", "/app", "-p", "0"]
+CMD ["http-server", "/app", "-p", "0", "--proxy", "http://styledsoirees.com"]
 # --proxy - to handle routing correctly by serving index.html for all routes.
 # -c-1: Disables caching by setting the cache TTL to -1
