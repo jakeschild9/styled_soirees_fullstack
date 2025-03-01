@@ -8,8 +8,6 @@ const request = require("request");
 
 const app = express();
 
-app.options('*', cors())
-
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
 
