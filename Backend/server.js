@@ -8,11 +8,7 @@ const request = require("request");
 
 const app = express();
 
-let corsOptions = {
-  origin : ['https://172.234.207.7:3000']
-}
-
-app.use(cors(corsOptions))
+app.options('*', cors())
 
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
