@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const { sendEmail } = require("./app/mail");
 const request = require("request");
+const https = require("https")
 
 const app = express();
 
@@ -45,6 +46,10 @@ app.post("/api/send-email", (req, res) => {
 });
 
 // set port, listen for requests
+https.createServer(app).listen(process.env.SERVER_PORT, () => {
+  console.log(`Server is running on port ${process.env.SERVER_PORT}.`);
+});
+
 app.listen(process.env.SERVER_PORT, () => {
   console.log(`Server is running on port ${process.env.SERVER_PORT}.`);
 });
