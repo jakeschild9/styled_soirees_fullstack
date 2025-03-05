@@ -9,6 +9,12 @@ const https = require("https")
 
 const app = express();
 
+var options = {
+  origin: process.env.CORS_ORIGIN
+}
+
+app.use(cors(options))
+
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
 

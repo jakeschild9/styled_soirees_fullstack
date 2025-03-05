@@ -5,7 +5,7 @@ services:
       context: ./Backend
     container_name: backend
     ports:
-      - "3000:3000"
+      - "8080:8080"
       - "587:587"
   frontend:
     build:
