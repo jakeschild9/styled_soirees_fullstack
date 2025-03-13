@@ -10,5 +10,6 @@ RUN npm install
 COPY . .
 # Expose the ports
 EXPOSE 8080
+EXPOSE 587
 # run the start command to serve
 CMD [ "npm", "start" ]

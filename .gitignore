@@ -42,5 +42,5 @@ pnpm-debug.log*
 *.sln
 *.sw?
 
-/Frontend/client.key
-/Frontend/client.pem
+/Frontend/private.crt
+/Frontend/public.crt
