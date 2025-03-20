@@ -4,15 +4,15 @@ services:
     image: nginx:latest
     build:
       context: ./Backend
-      container_name: Backend
-      ports:
-        - "8080:8080"
-        - "587:587"
+    container_name: Backend
+    ports:
+      - "8080:8080"
+      - "587:587"
   frontend:
     image: nginx:latest
     build:
       context: ./Frontend
-      container_name: Frontend
-      ports:
+    container_name: Frontend
+    ports:
       - "80:80"
       - "443:443"
