@@ -1,7 +1,6 @@
 
 services:
   backend:
-    image: nginx:latest
     build:
       context: ./Backend
     container_name: Backend
