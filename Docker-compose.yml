@@ -8,7 +8,6 @@ services:
       - "8080:8080"
       - "587:587"
   frontend:
-    image: nginx:latest
     build:
       context: ./Frontend
     container_name: Frontend
