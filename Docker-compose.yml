@@ -16,7 +16,7 @@ services:
       - "443:443"
     volumes:
       - ./nginx
-      - ./private.crt:/private.crt
-      - ./public.crt:/public.crt
+      - ./private.pem:/private.pem
+      - ./public.pem:/public.pem
     depends_on:
       - backend
