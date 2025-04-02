@@ -17,6 +17,8 @@ WORKDIR /app
 # Copy the built files from the build stage into the NGINX html directory
 COPY --from=build-stage /app/dist /usr/share/nginx/html
 # Copy the custom NGINX configuration
+COPY private.pem Fronted/private.pem
+COPY public.pem Fronted/public.pem
 COPY nginx.conf Frontend/nginx.conf
 # Expose the ports
 EXPOSE 80
