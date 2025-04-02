@@ -15,7 +15,7 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./Frontend/private.crt:private.crt
-      - ./Frontend/public.crt:rpublic.crt
+      - ./private.crt:/private.crt
+      - ./public.crt:/public.crt
     depends_on:
       - backend
