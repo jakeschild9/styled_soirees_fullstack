@@ -42,5 +42,4 @@ pnpm-debug.log*
 *.sln
 *.sw?
 
-/Frontend/private.crt
-/Frontend/public.crt
+/Frontend/certs

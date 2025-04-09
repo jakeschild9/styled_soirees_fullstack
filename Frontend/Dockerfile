@@ -19,6 +19,9 @@ WORKDIR /app
 COPY --from=build-stage /app/dist /usr/share/nginx/html
 # Copy the custom NGINX configuration
 COPY nginx.conf Frontend/nginx.conf
+
+COPY ./certs/cert.pem /etc/ssl/certs/cert.pem
+COPY ./certs/key.pem /etc/ssl/private/key.pem
 # Expose the ports
 EXPOSE 80
 EXPOSE 443
