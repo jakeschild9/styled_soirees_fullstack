@@ -12,8 +12,7 @@ COPY . .
 RUN npm run build
 # Use the lightweight node image from the previous stage for production deployment
 FROM nginx:alpine AS production-stage
-# Add a /app volume
-VOLUME [ "/app" ]
+
 # Set the working directory
 WORKDIR /app
 # Copy the built files from the build stage into the NGINX html directory
