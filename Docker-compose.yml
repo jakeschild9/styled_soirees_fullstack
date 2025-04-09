@@ -15,8 +15,7 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./nginx
-      - ./private.pem:/private.pem
-      - ./public.pem:/public.pem
+      - ./etc/Frontend/private.pem:/app
+      - ./etc/Frontend/public.pem:/app
     depends_on:
       - backend
