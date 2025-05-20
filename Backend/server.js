@@ -1,4 +1,5 @@
 const express = require("express");
+const fs = require("fs")
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const mongoose = require("mongoose");
@@ -15,11 +16,8 @@ var options = {
 
 app.use(cors(options))
 
-// parse requests of content-type - application/json
-app.use(bodyParser.json());
-
-// parse requests of content-type - application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.post("/api/send-email", (req, res) => {
   const { subject, message, token } = req.body;
@@ -51,7 +49,12 @@ app.post("/api/send-email", (req, res) => {
   );
 });
 
-// set port, listen for requests
-app.listen(process.env.SERVER_PORT, () => {
-  console.log(`Server is running on port ${process.env.SERVER_PORT}.`);
+const cert = {
+  key: fs.readFileSync("/etc/letsencrypt/live/styledsoirees.com/privkey.pem"),
+  cert: fs.readFileSync("/etc/letsencrypt/live/styledsoirees.com/fullchain.pem"),
+}
+
+const port = process.env.SERVER_PORT || 8080;
+https.createServer(cert, app).listen(port, () => {
+  console.log(`Server is running on HTTPS port ${port}`);
 });

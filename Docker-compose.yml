@@ -7,6 +7,8 @@ services:
     ports:
       - "8080:8080"
       - "587:587"
+    volumes:
+      - ./certbot/conf/:/etc/letsencrypt
   frontend:
     build:
       context: ./Frontend
@@ -16,3 +18,14 @@ services:
       - "443:443"
     depends_on:
       - backend
+    volumes:
+      - ./Frontend/nginx/conf/:/etc/nginx/conf.d/
+      - ./certbot/conf/:/etc/letsencrypt
+      - ./certbot/www/:/var/www/certbot
+  certbot:
+    image: certbot/certbot:latest
+    volumes:
+      - ./certbot/www:/var/www/certbot/:rw
+      - ./certbot/conf:/etc/letsencrypt/:rw
+    depends_on:
+    - frontend

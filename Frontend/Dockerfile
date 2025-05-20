@@ -12,13 +12,8 @@ COPY . .
 RUN npm run build
 # Use the lightweight node image from the previous stage for production deployment
 FROM nginx:alpine AS production-stage
-# Copy the custom NGINX configuration
-COPY --from=build-stage /app/nginx.conf Frontend/nginx.conf
 # Copy the built files from the build stage into the NGINX html directory
 COPY --from=build-stage /app/dist /usr/share/nginx/html
-
-COPY ./certs/cert.pem /etc/ssl/certs/cert.pem
-COPY ./certs/key.pem /etc/ssl/private/key.pem
 # Expose the ports
 EXPOSE 80
 EXPOSE 443
