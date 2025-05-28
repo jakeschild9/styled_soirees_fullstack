@@ -7,18 +7,19 @@ let nameValue = ref("");
 let partnernameValue = ref("");
 let emailValue = ref("");
 let phoneValue = ref("");
+let dateValue = ref("");
 let messageValue = ref("");
 let banner = ref(false);
 let notification = ref("");
 
-const sendEmail = async (name, partnername, email, phone, message) => {
+const sendEmail = async (name, partnername, email, phone, message, date) => {
   grecaptcha.ready(function () {
     grecaptcha
       .execute("6Lf36MoqAAAAAHXTPvTd4aGqJagMVeggv5CFlVeJ", { action: "submit" })
       .then(function (token) {
         let data = {
           subject: `${name} and ${partnername}`,
-          message: `Email: ${email} \n Phone Number: ${phone} \n Message: ${message}`,
+          message: `Email: ${email} \n Phone Number: ${phone} \n Message: ${message} \n Event Date: ${date}`,
           token: token,
         };
         axios.post("/api/send-email", data).catch((error) => {
@@ -33,6 +34,7 @@ const sendEmail = async (name, partnername, email, phone, message) => {
         partnernameValue.value = "";
         emailValue.value = "";
         phoneValue.value = "";
+        dateValue.value = "";
         messageValue.value = "";
       })
       .catch(function (error) {
@@ -54,7 +56,8 @@ const sendEmail = async (name, partnername, email, phone, message) => {
           partnernameValue,
           emailValue,
           phoneValue,
-          messageValue
+          messageValue,
+          dateValue,
         )
       "
       class="w-3/4"
@@ -147,6 +150,24 @@ const sendEmail = async (name, partnername, email, phone, message) => {
             for="phone"
             class="absolute -top-3.5 left-0 font-serif text-sm text-gray-700 transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-gray-900"
             >*Phone Number</label
+          >
+        </div>
+      </div>
+      <div class="py-4">
+        <div class="relative">
+          <input
+            v-model="dateValue"
+            type="text"
+            id="date"
+            name="date"
+            class="peer h-10 w-full border-b border-gray-600 pt-2 font-serif text-gray-900 placeholder-transparent focus:border-b-2 focus:border-gray-900 focus:outline-none"
+            placeholder="Event Date"
+            required
+          />
+          <label
+            for="date"
+            class="absolute -top-3.5 left-0 font-serif text-sm text-gray-700 transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-gray-900"
+            >*Event Date</label
           >
         </div>
       </div>
