@@ -13,10 +13,10 @@ import invitation from "@/assets/img/classic.jpeg";
       alt=""
     />
     <div
-      class="font-moda flex flex-col items-center justify-center bg-slate-50 p-6 tracking-wide md:px-1/12 md:text-4xl lg:text-7xl"
+      class="font-moda flex flex-col items-center justify-center bg-slate-50 p-6 tracking-wide md:px-1/12 md:text-4xl lg:text-6xl"
     >
-      <h5 class="mb-8 text-2xl font-medium text-black md:text-5xl">About Me</h5>
-      <p class="lg:px-15 mb-6 text-center text-base text-black md:text-2xl">
+      <h5 class="mb-8 text-xl font-medium text-black md:text-4xl">About Me</h5>
+      <p class="lg:px-15 mb-6 text-center text-base text-black md:text-xl">
         I’ve always had a deep passion for organizing and planning, and I
         believe that every special event deserves to be what you have always
         dreamed of. I am so in love with the wedding and event industry which I
@@ -27,7 +27,7 @@ import invitation from "@/assets/img/classic.jpeg";
         filled with unforgettable moments.
       </p>
       <p
-        class="font-signature text-surface/75 sm:text-xl md:text-3xl dark:text-black"
+        class="font-sign text-surface/75 sm:text-xl md:text-2xl dark:text-black"
       >
         -Brooke Markovich
       </p>

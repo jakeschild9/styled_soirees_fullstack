@@ -9,7 +9,7 @@ export default {
                 moda: ["Bodoni Moda"],
                 italiana: ["Italiana"],
                 signature: ["Corinthia"],
-
+                sign: ["Ballet"],
             },
             gridTemplateColumns: {
                 "70/30": "70% 28%",
