@@ -1,6 +1,6 @@
 <script setup>
-import aboutme from "@/assets/img/about.jpeg";
-import invitation from "@/assets/img/classic.jpeg";
+import aboutme from "@/assets/img/about2.0.jpeg";
+import invitation from "@/assets/img/homelandscape.jpeg";
 </script>
 
 <template>
