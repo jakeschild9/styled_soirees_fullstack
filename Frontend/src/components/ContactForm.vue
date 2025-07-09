@@ -8,18 +8,19 @@ let partnernameValue = ref("");
 let emailValue = ref("");
 let phoneValue = ref("");
 let dateValue = ref("");
+let locationValue = ref("")
 let messageValue = ref("");
 let banner = ref(false);
 let notification = ref("");
 
-const sendEmail = async (name, partnername, email, phone, message, date) => {
+const sendEmail = async (name, partnername, email, phone, location, message, date) => {
   grecaptcha.ready(function () {
     grecaptcha
       .execute("6Lf36MoqAAAAAHXTPvTd4aGqJagMVeggv5CFlVeJ", { action: "submit" })
       .then(function (token) {
         let data = {
           subject: `${name} and ${partnername}`,
-          message: `Email: ${email} \n Phone Number: ${phone} \n Message: ${message} \n Event Date: ${date}`,
+          message: `Email: ${email} \n Phone Number: ${phone} \n Message: ${message} \n Event Location: ${location} \n Event Date: ${date}`,
           token: token,
         };
         axios.post("/api/send-email", data).catch((error) => {
@@ -35,6 +36,7 @@ const sendEmail = async (name, partnername, email, phone, message, date) => {
         emailValue.value = "";
         phoneValue.value = "";
         dateValue.value = "";
+        locationValue.value = "";
         messageValue.value = "";
       })
       .catch(function (error) {
@@ -56,6 +58,7 @@ const sendEmail = async (name, partnername, email, phone, message, date) => {
           partnernameValue,
           emailValue,
           phoneValue,
+          locationValue,
           messageValue,
           dateValue,
         )
@@ -168,6 +171,23 @@ const sendEmail = async (name, partnername, email, phone, message, date) => {
             for="date"
             class="absolute -top-3.5 left-0 font-serif text-sm text-gray-700 transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-gray-900"
             >*Event Date</label
+          >
+        </div>
+      </div>
+      <div class="py-4">
+        <div class="relative">
+          <input
+            v-model="locationValue"
+            type="text"
+            id="location"
+            name="location"
+            class="peer h-10 w-full border-b border-gray-600 pt-2 font-serif text-gray-900 placeholder-transparent focus:border-b-2 focus:border-gray-900 focus:outline-none"
+            placeholder="Location"
+          />
+          <label
+            for="location"
+            class="absolute -top-3.5 left-0 font-serif text-sm text-gray-700 transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-gray-900"
+            >Event Location</label
           >
         </div>
       </div>
