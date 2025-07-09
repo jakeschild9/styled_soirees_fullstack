@@ -1,7 +1,7 @@
 <script setup>
 import chrimson from "@/assets/img/crimson.jpeg"
 import malachi from "@/assets/img/malachi.jpeg"
-import derek from "@/assets/img/derek.jpeg"
+import adara from "@/assets/img/Adara_Jade.jpeg"
 import evermor from "@/assets/img/evermore.jpeg"
 import bars from "@/assets/img/bars.jpeg"
 import glow from "@/assets/img/glow.jpeg"
@@ -117,22 +117,21 @@ import glow from "@/assets/img/glow.jpeg"
         </div>
         <div class="h-full overflow-hidden rounded-xl bg-slate-50 shadow-xl">
             <div class="relative pb-2/3">
-                <img :src="derek" class="absolute h-full w-full object-cover" />
+                <img :src="adara" class="absolute h-full w-full object-cover" />
             </div>
             <div
                 class="font-moda flex flex-wrap justify-center p-6 text-center"
             >
                 <a
                     class="pb-5 text-3xl"
-                    href="https://www.instagram.com/derek_coffman_photography/"
+                    href="https://www.instagram.com/adarajadephoto/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >DEREK COFFMAN</a
+                    >ADARA JADE</a
                 >
                 <p class="text-slate-700">
-                    Personal and editorial-style photography that simply
-                    captures your love story with depth, emotion, and timeless
-                    elegance.
+                    St. Louis based wedding photographer capturing candid,
+                    timeless moments with an editorial touch!
                 </p>
             </div>
         </div>
